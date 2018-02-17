@@ -4,7 +4,6 @@ let $NVIM_NCM_MULTI_THREAD=0
 
 " nvim config
 nmap 0 ^
-nmap <C-w> :w<CR>
 
 " Use enter key to add empty line before or after cursor
 nmap <S-Enter> o<Esc>
@@ -15,6 +14,7 @@ let mapleader = " "
 " Editing this file
 nmap <leader>vi :tabnew ~/.config/nvim/init.vim<CR>
 nmap <leader>so :source ~/.config/nvim/init.vim<CR>
+nmap <leader>w :w<CR>
 
 " Copy & paste with system clipboard
 " Grr, this always copies the whole line
