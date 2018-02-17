@@ -4,7 +4,7 @@ let $NVIM_NCM_MULTI_THREAD=0
 
 " nvim config
 nmap 0 ^
-nmap <C-s> :w<cr>
+nmap <C-w> :w<CR>
 
 " Use enter key to add empty line before or after cursor
 nmap <S-Enter> o<Esc>
