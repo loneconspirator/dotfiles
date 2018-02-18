@@ -1,0 +1,35 @@
+[alias]
+  a = add
+  aa = add --all
+  ci = commit
+  co = checkout
+  s = stash
+  sp = stash pop
+
+  # From somewhere
+  bsort = "!gb() { git branch --color=always $@ | sort -n; }; gb"
+  recent = "!gb() { num=${1-`echo 5`}; git for-each-ref --sort='-authordate' --format='%(refname:short)' refs/heads | head -n $num; }; gb"
+
+  # From http://gggritso.com/human-git-aliases
+  unstage = reset -q HEAD --
+  discard = checkout --
+  uncommit = reset --mixed HEAD~
+  amend = commit --amend
+  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+  precommit = diff --cached --diff-algorithm=minimal -w
+[core]
+	editor = nvim
+	pager = diff-so-fancy | less --tabs=2 -RFX
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[push]
+	default = simple
+[user]
+	email = mike+github@technomonkey.net
+	name = Mike McCracken
+
