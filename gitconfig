@@ -3,6 +3,7 @@
   aa = add --all
   ci = commit
   co = checkout
+  d = diff
   s = stash
   sp = stash pop
 
@@ -19,7 +20,7 @@
   precommit = diff --cached --diff-algorithm=minimal -w
 [core]
 	editor = nvim
-	pager = diff-so-fancy | less --tabs=2 -RFX
+	# pager = diff-so-fancy | less --tabs=2 -RFX
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
