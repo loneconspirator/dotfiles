@@ -4,7 +4,7 @@ brew 'alt'
 brew 'battery'
 brew 'fswatch'
 brew 'fzf'
-brew 'gccl
+brew 'gcc'
 brew 'git'
 brew 'neovim'
 brew 'nginx'
