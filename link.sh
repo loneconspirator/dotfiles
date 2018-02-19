@@ -7,3 +7,5 @@ echo "source \${DOTFILES}/tmux.conf" > ~/.tmux.conf
 
 echo "[include]" > ~/.gitconfig
 echo "  path = ${DOTFILES}/gitconfig" >> ~/.gitconfig
+
+ln -s alacirtty.yml ~/.alacritty.yml
