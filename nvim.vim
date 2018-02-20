@@ -45,7 +45,7 @@ Plug 'tpope/vim-sensible'
 " Snippets
 Plug 'honza/vim-snippets'
 Plug 'roxma/nvim-completion-manager'
-" Plug 'SirVer/ultisnips'{
+" Plug 'SirVer/ultisnips'
 
 " Navigtion
 Plug '/usr/local/opt/fzf'
