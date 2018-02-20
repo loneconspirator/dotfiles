@@ -60,6 +60,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
+" Linting
+Plug 'w0rp/ale'
+
 " Ruby / Rails
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'haml', 'eruby'] }
 Plug 'tpope/vim-rake', { 'for': 'ruby' }
@@ -69,7 +72,12 @@ Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
 
+" Scala
+Plug 'derekwyatt/vim-scala'
+
 call plug#end()
+
+let g:scala_scaladoc_indent = 1
 
 set clipboard=unnamed
 
