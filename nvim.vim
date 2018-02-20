@@ -45,10 +45,11 @@ Plug 'tpope/vim-sensible'
 " Snippets
 Plug 'honza/vim-snippets'
 Plug 'roxma/nvim-completion-manager'
-" Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'{
 
 " Navigtion
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 " Plug 'ctrlpvim/ctrlp.vim' " alternate to fzf
 Plug 'scrooloose/nerdtree'
 
@@ -109,7 +110,7 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
-
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " Find the alternate file for the current path and open it
 nnoremap <leader>. :w<cr>:call AltCommand(expand('%'), ':e')<cr>
@@ -127,6 +128,8 @@ set rtp+=/usr/local/opt/fzf
 set mouse=a
 
 " proactively save files
+autocmd InsertLeave * update
+" not sure if I need these anymore
 set autowrite
 set autowriteall
 :au FocusLost * :wa
