@@ -1,9 +1,11 @@
 [alias]
   a = add
   aa = add --all
+  b = branch
   ci = commit
   co = checkout
   d = diff
+  nb = checkout -b
   s = stash
   sp = stash pop
 
