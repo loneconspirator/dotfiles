@@ -3,6 +3,11 @@
 # Attach or create tmux session named the same as current directory.
 
 cur_folder="$(basename "$PWD" | tr . -)"
+sessions=" $(tmux ls | sed 's/^\(.*\): .*$/\1/' | awk '!/0$/{printf "%s ", $0}/0$/')"
+if [[ $# -eq 1  && ! $(echo "$sessions" | grep " $1 ") ]]; then
+  echo "No such session $1"
+  exit -1
+fi
 session_name=$1 && [[ -z "$1" ]] && session_name=$cur_folder
 
 session_exists() {
