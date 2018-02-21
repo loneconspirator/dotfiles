@@ -54,11 +54,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 
 " General development
-Plug 'benekastah/neomake'
+" Plug 'benekastah/neomake'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
 
 " Linting
 Plug 'w0rp/ale'
@@ -86,21 +88,38 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+let g:VtrStripLeadingWhitespace = 0
+let g:VtrClearEmptyLines = 0
+let g:VtrAppendNewline = 1
+
+nmap <leader>va :VtrAttachToPane<CR>
+nmap <leader>vc :VtrSendCommand<CR>
+nmap <leader>vf :VtrSendFile<CR>
+nmap <leader>vs :VtrSendLinesToRunner<CR>
+nmap <leader>vo :VtrOpenRunner {'orientation': 'h', 'percentage': 50}<CR>
+nmap <leader>vz :VtrFocusRunner<CR>
+vmap <leader>va :VtrAttachToPane<CR>
+vmap <leader>vc :VtrSendCommand<CR>
+vmap <leader>vf :VtrSendFile<CR>
+vmap <leader>vs :VtrSendLinesToRunner<CR>
+vmap <leader>vo :VtrOpenRunner {'orientation': 'h', 'percentage': 50}<CR>
+vmap <leader>vz :VtrFocusRunner<CR>
+
 " Neomake
 " let g:neomake_verbose = 3
-let g:neomake_logfile = '/tmp/neomake.log'
-let g:neomake_ruby_reek_maker_errorformat =
-        \ '%E%.%#: Racc::ParseError: %f:%l :: %m,' .
-        \ '%W%f:%l: %m'
-let g:neomake_ruby_reek_maker = {
-    \ 'args': ['--single-line'],
-    \ 'errorformat': g:neomake_ruby_reek_maker_errorformat,
-    \ }
+" let g:neomake_logfile = '/tmp/neomake.log'
+" let g:neomake_ruby_reek_maker_errorformat =
+        " \ '%E%.%#: Racc::ParseError: %f:%l :: %m,' .
+        " \ '%W%f:%l: %m'
+" let g:neomake_ruby_reek_maker = {
+    " \ 'args': ['--single-line'],
+    " \ 'errorformat': g:neomake_ruby_reek_maker_errorformat,
+"     \ }
 
-let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_serialize = 1
-let g:neomake_serialize_abort_on_error = 1
+" let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
+" let g:neomake_javascript_enabled_makers = ['eslint']
+" let g:neomake_serialize = 1
+" let g:neomake_serialize_abort_on_error = 1
 
 " Use alt to quickly open a source files test and vice versa
 " Run a given vim command on the results of alt from a given path.
@@ -141,6 +160,11 @@ autocmd InsertLeave * update
 set autowrite
 set autowriteall
 :au FocusLost * :wa
+let g:tmux_navigator_save_on_switch = 2
+
+autocmd VimResized * :wincmd =
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
 
 " check one time after 4s of inactivity in normal mode
 set autoread
