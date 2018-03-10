@@ -6,8 +6,7 @@ let $NVIM_NCM_MULTI_THREAD=0
 nmap 0 ^
 
 " Use enter key to add empty line before or after cursor
-nmap <S-Enter> o<Esc>
-nmap <CR> O<Esc>
+nnoremap <CR> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 
 let mapleader = " "
 
