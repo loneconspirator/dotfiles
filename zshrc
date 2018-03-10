@@ -20,6 +20,7 @@ plugins=(
   bundler
   rails
   rbenv
+  vi-mode
   zsh-autosuggestions
   zsh-completions
   zsh-syntax-highlighting
