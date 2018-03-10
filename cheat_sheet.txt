@@ -1,0 +1,38 @@
+C-s C-c: Shows this cheat sheet
+
+Neovim:
+=======
+  FZF: C-x/C-v/C-t open in new split/tab
+Tabs:
+  C-w T - break window to new tab
+  <L> <#> - jump to tab #
+  gt / gT - next/prev tab
+  <L>td - close tab
+  <L>tn - new tab
+  <L>te - edit sin new tab
+Tmux
+  <L>vo open runner pane
+  <L>vs send line(s) to runner
+  <L>vf send file to runner
+  <L>vz focus runner pane
+Code:
+  <L>c<space> toggle comment
+
+
+Tmux:
+=====
+tmux list-keys # shows key bindings
+Panes:
+  <P>x kill pane
+  <P>s swap pane position
+  <P>e run command in new pane
+  <P>C-l clear pane
+  resize with <P><C-h/j/k/l>
+Windows:
+  <P>c new window
+  <P>& kill window
+  <P><#> jump to window #
+Sessions:
+  <P>C-b make new session for cur dir
+  <P>C-w fuzzy find named session
+  <P>K kill session
