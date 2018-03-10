@@ -16,12 +16,6 @@ nmap <leader>vi :tabnew ~/.config/nvim/init.vim<CR>
 nmap <leader>so :source ~/.config/nvim/init.vim<CR>
 nmap <leader>w :w<CR>
 
-" Copy & paste with system clipboard
-" Grr, this always copies the whole line
-" vmap <C-c> :'<,'>w !pbcopy<CR><CR>
-map <C-c> :.w !pbcopy<CR><CR>
-nmap <C-v> :r !pbpaste
-
 map <C-p> :FZF<CR>
 map <C-n> :NERDTreeToggle<CR>
 
