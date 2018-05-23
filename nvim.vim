@@ -60,15 +60,17 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 
+" JVM / Scala
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 " deoplete code completion
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"  Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+"  Plug 'ensime/ensime-vim'
 endif
-let g:deoplete#enable_at_startup = 1
 
 " Linting
 Plug 'w0rp/ale'
@@ -91,6 +93,7 @@ source nvim/autosave.vim
 source nvim/tmux_runner.vim
 source nvim/tabs.vim
 source nvim/file_nav.vim
+source $DOTFILES/nvim/scala.vim
 
 let g:scala_scaladoc_indent = 1
 
