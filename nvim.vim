@@ -89,10 +89,10 @@ Plug 'derekwyatt/vim-scala'
 
 call plug#end()
 
-source nvim/autosave.vim
-source nvim/tmux_runner.vim
-source nvim/tabs.vim
-source nvim/file_nav.vim
+source $DOTFILES/nvim/autosave.vim
+source $DOTFILES/nvim/file_nav.vim
+source $DOTFILES/nvim/tmux_runner.vim
+source $DOTFILES/nvim/tabs.vim
 source $DOTFILES/nvim/scala.vim
 
 let g:scala_scaladoc_indent = 1
