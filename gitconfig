@@ -6,8 +6,11 @@
   co = checkout
   d = diff
   nb = checkout -b
-  s = stash
+  ph = push
+  pl = pull
+  sh = stash -u
   sp = stash pop
+  ss = status
 
   # From somewhere
   bsort = "!gb() { git branch --color=always $@ | sort -n; }; gb"
