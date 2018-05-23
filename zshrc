@@ -5,6 +5,9 @@ export PATH="/usr/local/sbin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Browser that ensime will open from vim for scaladocs
+export BROWSER="brave %s"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/mike/.oh-my-zsh
 
