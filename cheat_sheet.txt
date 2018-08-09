@@ -26,7 +26,7 @@ Panes:
   <P>x kill pane
   <P>s swap pane position
   <P>e run command in new pane
-  <P>C-l clear pane
+  <P>k clear pane
   resize with <P><C-h/j/k/l>
 Windows:
   <P>c new window
