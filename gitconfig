@@ -1,6 +1,7 @@
 [alias]
   a = add
   aa = add --all
+  ai = add --interactive
   b = branch
   ci = commit
   co = checkout
