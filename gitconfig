@@ -12,6 +12,7 @@
   sh = stash -u
   sp = stash pop
   ss = status
+  stage = push heroku master
 
   # From somewhere
   bsort = "!gb() { git branch --color=always $@ | sort -n; }; gb"
