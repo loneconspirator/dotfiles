@@ -59,6 +59,8 @@ Plug 'tpope/vim-repeat'
 Plug 'machakann/vim-highlightedyank'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'zivyangll/git-blame.vim'
+nnoremap <Leader>ss :<C-u>call gitblame#echo()<CR>
 
 " JVM / Scala
 Plug 'roxma/nvim-yarp'
