@@ -5,7 +5,9 @@
   b = branch
   ci = commit
   co = checkout
+  cp = cherry-pick
   d = diff
+  mup = !git checkout master && git pull && git checkout -
   nb = checkout -b
   ph = push
   pl = pull
