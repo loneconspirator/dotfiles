@@ -28,6 +28,8 @@
 [core]
 	editor = nvim
 	pager = diff-so-fancy | less --tabs=2 -RFX
+[fetch]
+  prune = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
