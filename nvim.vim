@@ -19,6 +19,10 @@ nmap <leader>w :w<CR>
 map <ScrollWheelUp> <C-U>
 map <ScrollWheelDown> <C-D>
 
+let g:ruby_host_prog = '/Users/mike/.rbenv/shims/neovim-ruby-host'
+let g:python_host_prog = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 set number relativenumber " line numbers
 set autoindent		" always set autoindenting on
 filetype plugin indent on
