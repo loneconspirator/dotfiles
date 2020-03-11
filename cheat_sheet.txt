@@ -17,6 +17,13 @@ Tmux
   <L>vz focus runner pane
 Code:
   <L>c<space> toggle comment
+  <L>ss git blame
+Ruby:
+  [m, ]M, [[, ]] - jump to method/class start/end
+  % jump btw matching keyword pairs
+  r, m, M - matchers for rubyblock, method, module
+  <L>ra - rubocop autofix
+  <L>. - jump to test / code
 
 
 Tmux:
