@@ -2,6 +2,7 @@ alias git=hub
 
 alias fsd="foreman start -f Procfile.dev"
 alias bi="bundle install"
+alias gcm='git checkout master'
 
 compdef g=git
 function g {
