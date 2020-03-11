@@ -76,6 +76,9 @@ endif
 
 " Linting
 Plug 'w0rp/ale'
+let b:ale_fixers = { 'ruby': 'rubocop' }
+highlight ALEWarning ctermbg=DarkGrey
+nmap <leader>ra :ALEFix<CR>
 
 " Ruby / Rails
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'haml', 'eruby'] }
