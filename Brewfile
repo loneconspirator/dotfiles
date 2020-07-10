@@ -3,19 +3,22 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 tap 'goles/battery'
+tap 'uptech/homebrew-oss'
 
-cask '1password'
-cask 'alacritty'
-cask 'authy'
-cask 'brave-browser'
-cask 'dropbox'
-cask 'google-chrome'
-cask 'slack'
+# The commented out ones were installed manually (brew doesn't like that)
+/* cask '1password' */
+/* cask 'alacritty' */
+/* cask 'authy' */
+/* cask 'brave-browser' */
+/* cask 'dropbox' */
+/* cask 'google-chrome' */
+/* cask 'slack' */
 cask 'spotify'
 cask 'vlc'
-cask 'workflowy'
-cask 'zoom'
+cask 'workflowye
+/* cask 'zoom' # This is not zoom.us */
 
+brew 'uptech/oss/alt'
 brew 'battery'
 brew 'diff-so-fancy'
 brew 'fswatch'
