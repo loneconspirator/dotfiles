@@ -11,6 +11,7 @@ tap 'uptech/homebrew-oss'
 /* cask 'authy' */
 /* cask 'brave-browser' */
 /* cask 'dropbox' */
+cask 'gimp'
 /* cask 'google-chrome' */
 /* cask 'slack' */
 cask 'spotify'
