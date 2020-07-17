@@ -67,6 +67,13 @@ Plug 'zivyangll/git-blame.vim'
 nnoremap <Leader>ss :<C-u>call gitblame#echo()<CR>
 nnoremap <Leader>g :<C-u>Commits<CR>
 
+" Floobits for pairing
+if has('nvim')
+  Plug 'floobits/floobits-neovim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'floobits/floobits-neovim'
+endif
+
 " JVM / Scala
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
