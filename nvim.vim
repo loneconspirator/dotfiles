@@ -85,6 +85,9 @@ else
   Plug 'Shougo/deoplete.nvim'
 "  Plug 'ensime/ensime-vim'
 endif
+let g:deoplete#custom#var('omni', 'input_patterns', {
+  \ 'scala': '[^. *\t]\.\w*'
+  \})
 
 " Linting
 Plug 'w0rp/ale'
