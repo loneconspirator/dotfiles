@@ -27,6 +27,18 @@
   amend = commit --amend
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
   precommit = diff --cached --diff-algorithm=minimal -w
+
+  # git-town standard aliases
+	append = town append
+	hack = town hack
+	kill = town kill
+	new-pull-request = town new-pull-request
+	prepend = town prepend
+	prune-branches = town prune-branches
+	rename-branch = town rename-branch
+	repo = town repo
+	ship = town ship
+	sync = town sync
 [core]
 	editor = nvim
 	pager = diff-so-fancy | less --tabs=2 -RFX
