@@ -11,10 +11,10 @@ Tabs:
   <L>tn - new tab
   <L>te - edit sin new tab
 Tmux
-  <L>vo open runner pane
-  <L>vs send line(s) to runner
-  <L>vf send file to runner
-  <L>vz focus runner pane
+  Runner pane: <L>v?
+  o: open, a:attach z:focus
+  send s:line, f:file
+  rspec n:near l:last ,:file
 Code:
   <L>c<space> toggle comment
   <L>ss git blame
