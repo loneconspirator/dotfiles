@@ -32,6 +32,8 @@ set expandtab
 set smarttab
 set softtabstop=2
 set inccommand=split
+set backupdir=~/vimtmp//,.
+set directory=~/vimtmp//,.
 
 " set winwidth=84
 " set winheight=5
@@ -45,9 +47,55 @@ Plug 'tpope/vim-sensible'
 
 " Snippets
 Plug 'honza/vim-snippets'
-" Plug 'roxma/nvim-completion-manager'
-" Plug 'SirVer/ultisnips'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'SirVer/ultisnips'
 
+" NCM2 / autocomplete stuff
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-github'
+Plug 'ncm2/ncm2-tmux'
+    " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
+    " found' messages
+    set shortmess+=c
+
+    " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+    inoremap <c-c> <ESC>
+
+    " When the <Enter> key is pressed while the popup menu is visible, it only
+    " hides the menu. Use this mapping to close the menu and also start a new
+    " line.
+    inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
+    " Use <TAB> to select the popup menu:
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+    " wrap existing omnifunc
+    " Note that omnifunc does not run in background and may probably block the
+    " editor. If you don't want to be blocked by omnifunc too often, you could
+    " add 180ms delay before the omni wrapper:
+    "  'on_complete': ['ncm2#on_complete#delay', 180,
+    "               \ 'ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
+    au User Ncm2Plugin call ncm2#register_source({
+            \ 'name' : 'css',
+            \ 'priority': 9,
+            \ 'subscope_enable': 1,
+            \ 'scope': ['css','scss'],
+            \ 'mark': 'css',
+            \ 'word_pattern': '[\w\-]+',
+            \ 'complete_pattern': ':\s*',
+            \ 'on_complete': ['ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
+            \ })
 " Navigtion
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -55,15 +103,19 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 
 " General development
-" Plug 'benekastah/neomake'
+Plug 'benekastah/neomake'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
 Plug 'machakann/vim-highlightedyank'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'zivyangll/git-blame.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+runtime macros/matchit.vim
 nnoremap <Leader>ss :<C-u>call gitblame#echo()<CR>
 nnoremap <Leader>g :<C-u>Commits<CR>
 
@@ -75,8 +127,8 @@ else
 endif
 
 " JVM / Scala
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+" Plug 'roxma/nvim-yarp'
+" Plug 'roxma/vim-hug-neovim-rpc'
 " deoplete code completion
 " if has('nvim')
   " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -107,13 +159,18 @@ highlight ALEWarning ctermbg=DarkGrey
 nmap <leader>ra :ALEFix<CR>
 
 " Ruby / Rails
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'haml', 'eruby'] }
+au BufRead,BufNewFile *.thor setfiletype ruby
+" Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'haml', 'eruby'] } "<- ERRORING
 Plug 'tpope/vim-rake', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'coffee', 'javascript'] }
 Plug 'tpope/vim-rbenv', { 'for': 'ruby' }
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
-Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
+" Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
+Plug 'jgdavey/tslime.vim'
+
+" Collaboration
+Plug 'floobits/floobits-neovim'
 
 call plug#end()
 
@@ -122,7 +179,8 @@ source $DOTFILES/nvim/file_nav.vim
 source $DOTFILES/nvim/tmux_runner.vim
 source $DOTFILES/nvim/tabs.vim
 
-let g:scala_scaladoc_indent = 1
+let w:scala_scaladoc_indent = 1
+
 
 set clipboard=unnamed
 
