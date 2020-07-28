@@ -45,7 +45,7 @@ Plug 'tpope/vim-sensible'
 
 " Snippets
 Plug 'honza/vim-snippets'
-Plug 'roxma/nvim-completion-manager'
+" Plug 'roxma/nvim-completion-manager'
 " Plug 'SirVer/ultisnips'
 
 " Navigtion
@@ -78,16 +78,27 @@ endif
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 " deoplete code completion
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"  Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-"  Plug 'ensime/ensime-vim'
-endif
-let g:deoplete#custom#var('omni', 'input_patterns', {
-  \ 'scala': '[^. *\t]\.\w*'
-  \})
+" if has('nvim')
+  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" "  Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
+" else
+  " Plug 'Shougo/deoplete.nvim'
+" "  Plug 'ensime/ensime-vim'
+" endif
+" " Deoplete
+" let g:deoplete#enable_at_startup = 1
+" call deoplete#custom#option('sources', {
+  " \ '_': ['buffer', 'member', 'tag', 'file', 'omni', 'ultisnips']
+  " \})
+" call deoplete#custom#var('omni', 'input_patterns', {
+  " \ 'scala': '[^. *\t]\.\w*'
+  " \})
+
+" Scala
+Plug 'derekwyatt/vim-scala'
+
+" Settings for vim-scala
+let g:scala_scaladoc_indent = 1
 
 " Linting
 Plug 'w0rp/ale'
@@ -104,25 +115,21 @@ Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
 
-" Scala
-Plug 'derekwyatt/vim-scala'
-
 call plug#end()
 
 source $DOTFILES/nvim/autosave.vim
 source $DOTFILES/nvim/file_nav.vim
 source $DOTFILES/nvim/tmux_runner.vim
 source $DOTFILES/nvim/tabs.vim
-source $DOTFILES/nvim/scala.vim
 
 let g:scala_scaladoc_indent = 1
 
 set clipboard=unnamed
 
 " nvim-completion-manager
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Put one space after comment characters
 let g:NERDSpaceDelims = 1
