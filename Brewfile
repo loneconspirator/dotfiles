@@ -6,18 +6,18 @@ tap 'goles/battery'
 tap 'uptech/homebrew-oss'
 
 # The commented out ones were installed manually (brew doesn't like that)
-/* cask '1password' */
-/* cask 'alacritty' */
-/* cask 'authy' */
-/* cask 'brave-browser' */
-/* cask 'dropbox' */
+# cask '1password'
+# cask 'alacritty'
+# cask 'authy'
+# cask 'brave-browser'
+# cask 'dropbox'
 cask 'gimp'
-/* cask 'google-chrome' */
-/* cask 'slack' */
+# cask 'google-chrome'
+# cask 'slack'
 cask 'spotify'
 cask 'vlc'
-cask 'workflowye
-/* cask 'zoom' # This is not zoom.us */
+cask 'workflowy'
+# cask 'zoom' # This is not zoom.us
 
 brew 'uptech/oss/alt'
 brew 'battery'
@@ -26,6 +26,7 @@ brew 'fswatch'
 brew 'fzf'
 brew 'gcc'
 brew 'git'
+brew 'git-town'
 brew 'neovim'
 brew 'nginx'
 brew 'node'

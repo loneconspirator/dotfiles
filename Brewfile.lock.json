@@ -2,16 +2,19 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "f56efde2425c278b127cb10be2844a9e00237139"
+        "revision": "f760551841012ee20c90f2afd336c15423b23479"
       },
       "homebrew/cask": {
-        "revision": "3f94c02fe2a28487df0c9d4ab52e18b5229718d8"
+        "revision": "66218db9a1fcc66f87054a93dcec73b44badb111"
       },
       "homebrew/core": {
-        "revision": "aed956a84e2ece259c1971fa232a45ad26cfd17a"
+        "revision": "e199bda3292d7412a98fd262ce1956610919596f"
       },
       "goles/battery": {
         "revision": "db967e77fb20c2ee3bb78e2d0d99e68950545e5a"
+      },
+      "uptech/oss": {
+        "revision": "910b19345471b4f1799224b60116b13ca77b4cff"
       }
     },
     "brew": {
@@ -246,16 +249,16 @@
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.5.catalina.bottle.tar.gz",
-              "sha256": "c4c025a3642417b75e69be73cce61f05042107dd52b5f549d9c21eba8d2c2c1c"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.5.catalina.bottle.1.tar.gz",
+              "sha256": "7f0633ca26dce126e3dddc8cc296bc32d58326fed74cc5396b35fb1e23f738f4"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.5.mojave.bottle.tar.gz",
-              "sha256": "fc2ff703029e0dfceff2ecde31730b3c8766ecac2cac8dd309270c3aa7b417ae"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.5.mojave.bottle.1.tar.gz",
+              "sha256": "b20a36bcfef6c929eec0f166143330ca54cc08d4581a8fe69a616b89d6c7f2f5"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.5.high_sierra.bottle.tar.gz",
-              "sha256": "be205c8cecbf8691db5f06b60e9a5dccbfe1e6bef2e1676fe0dbdf109b2fdf9f"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.5.high_sierra.bottle.1.tar.gz",
+              "sha256": "749adb93b5e42cbfbdd14f1ae1567d73e1ecbf7e0f264f04dc86c1b10a192308"
             }
           }
         }
@@ -282,7 +285,7 @@
         }
       },
       "sbt": {
-        "version": "1.3.12",
+        "version": "1.3.13",
         "bottle": false
       },
       "scala": {
@@ -422,7 +425,54 @@
         "version": "0.32.0",
         "bottle": false
       },
-      "python3": null
+      "python3": null,
+      "uptech/oss/alt": null,
+      "diff-so-fancy": {
+        "version": "1.3.0",
+        "bottle": false
+      },
+      "git-town": {
+        "version": "7.4.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/git-town-7.4.0.catalina.bottle.tar.gz",
+              "sha256": "e6d6fbabc41bbef0488161ac1ab71d486dd0439eb8ee3072b1a812cc0d573bee"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/git-town-7.4.0.mojave.bottle.tar.gz",
+              "sha256": "2d39b261dfa7208c257416d61115c22bf242b16e7d696eb810252c192981a052"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/git-town-7.4.0.high_sierra.bottle.tar.gz",
+              "sha256": "40debf4a33e518102e579e8e8dbdefa2676c4bf057cbcb994bb86f05df17dd16"
+            }
+          }
+        }
+      },
+      "zsh-syntax-highlighting": {
+        "version": "0.7.1",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/zsh-syntax-highlighting-0.7.1.catalina.bottle.tar.gz",
+              "sha256": "6b7d4cdc41b56c842a4b76f9901d922d1f39bd638e94249881078a873de8970b"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/zsh-syntax-highlighting-0.7.1.mojave.bottle.tar.gz",
+              "sha256": "6b7d4cdc41b56c842a4b76f9901d922d1f39bd638e94249881078a873de8970b"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/zsh-syntax-highlighting-0.7.1.high_sierra.bottle.tar.gz",
+              "sha256": "6b7d4cdc41b56c842a4b76f9901d922d1f39bd638e94249881078a873de8970b"
+            }
+          }
+        }
+      }
     },
     "cask": {
       "alacritty": {
@@ -436,17 +486,35 @@
         "options": {
           "full_name": "spotify"
         }
+      },
+      "gimp": {
+        "version": "2.10.14",
+        "options": {
+          "full_name": "gimp"
+        }
+      },
+      "vlc": {
+        "version": "3.0.11",
+        "options": {
+          "full_name": "vlc"
+        }
+      },
+      "workflowy": {
+        "version": "1.3.5-8835",
+        "options": {
+          "full_name": "workflowy"
+        }
       }
     }
   },
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.4",
+        "HOMEBREW_VERSION": "2.4.6",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "aed956a84e2ece259c1971fa232a45ad26cfd17a",
+        "Homebrew/homebrew-core": "e199bda3292d7412a98fd262ce1956610919596f",
         "CLT": "11.5.0.0.1.1588476445",
-        "Xcode": "11.5",
+        "Xcode": "11.6",
         "macOS": "10.15.5"
       }
     }
