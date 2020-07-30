@@ -12,6 +12,8 @@ echo "source \${DOTFILES}/tmux.conf" > ~/.tmux.conf
 echo "[include]" > ~/.gitconfig
 echo "  path = ${DOTFILES}/gitconfig" >> ~/.gitconfig
 
+mkdir ~/vimtmp/
+
 # This was causing me problems with the latest alacritty - needs updating
 # ln -s ${DOTFILES}/alacirtty.yml ~/.alacritty.yml
 
