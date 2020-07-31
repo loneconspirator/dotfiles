@@ -169,9 +169,6 @@ Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
 Plug 'jgdavey/tslime.vim'
 
-" Collaboration
-Plug 'floobits/floobits-neovim'
-
 call plug#end()
 
 source $DOTFILES/nvim/autosave.vim
