@@ -39,6 +39,8 @@ set directory=~/vimtmp//,.
 " set winheight=5
 " set winminheight=5
 " set winheight=999
+set splitbelow
+set splitright
 
 " plugins
 call plug#begin('~/.vim/plugged')
@@ -169,6 +171,8 @@ Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
 Plug 'jgdavey/tslime.vim'
 
+" plantuml
+Plug 'aklt/plantuml-syntax'
 call plug#end()
 
 source $DOTFILES/nvim/autosave.vim
