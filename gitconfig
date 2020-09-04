@@ -18,6 +18,7 @@
 
   # From somewhere
   bsort = "!gb() { git branch --color=always $@ | sort -n; }; gb"
+  conflicts = diff --name-only --diff-filter=U
   recent = "!gb() { num=${1-`echo 5`}; git for-each-ref --sort='-authordate' --format='%(refname:short)' refs/heads | head -n $num; }; gb"
 
   # From http://gggritso.com/human-git-aliases
