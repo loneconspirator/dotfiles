@@ -101,7 +101,10 @@ Plug 'ncm2/ncm2-tmux'
             \ })
 " Navigtion
 Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'rking/ag.vim'
+
+" Plug 'junegunn/fzf.vim'
 " Plug 'ctrlpvim/ctrlp.vim' " alternate to fzf
 Plug 'scrooloose/nerdtree'
 
