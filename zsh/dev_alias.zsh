@@ -6,6 +6,8 @@ alias tc='rm -rf tmp/cache'
 alias dbm='bundle exec rails db:migrate ; RAILS_ENV=test bundle exec rails db:migrate'
 alias dbr='bundle exec rails db:rollback ; RAILS_ENV=test bundle exec rails db:rollback'
 
+alias cdip="cd ~/git/InPlay"
+
 compdef g=git
 function g {
   if [[ $# -gt 0 ]]; then
