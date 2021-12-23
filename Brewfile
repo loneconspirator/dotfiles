@@ -12,6 +12,7 @@ tap 'uptech/homebrew-oss'
 # cask 'brave-browser'
 cask 'discord'
 # cask 'dropbox'
+cask 'finicky' # Browser chooser app
 cask 'github'
 # cask 'gitkraken' # Not sure I like this one
 cask 'gimp'

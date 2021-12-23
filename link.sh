@@ -17,6 +17,8 @@ mkdir ~/vimtmp/
 # This was causing me problems with the latest alacritty - needs updating
 # ln -s ${DOTFILES}/alacirtty.yml ~/.alacritty.yml
 
+ln -s ${DOTFILES}/finicky.js ~/.finicky.js
+
 # Install nvim plugged
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim2
 
