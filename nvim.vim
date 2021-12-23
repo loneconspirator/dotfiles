@@ -110,17 +110,19 @@ Plug 'scrooloose/nerdtree'
 
 " General development
 Plug 'benekastah/neomake'
-Plug 'scrooloose/nerdcommenter'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kana/vim-textobj-user'
+Plug 'machakann/vim-highlightedyank'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
-Plug 'machakann/vim-highlightedyank'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'christoomey/vim-tmux-runner'
+Plug 'scrooloose/nerdcommenter'
 Plug 'zivyangll/git-blame.vim'
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
 runtime macros/matchit.vim
 nnoremap <Leader>ss :<C-u>call gitblame#echo()<CR>
 nnoremap <Leader>g :<C-u>Commits<CR>
