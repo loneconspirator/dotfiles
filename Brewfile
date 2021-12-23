@@ -17,7 +17,7 @@ cask 'github'
 # cask 'gitkraken' # Not sure I like this one
 cask 'gimp'
 # cask 'google-chrome'
-cask 'licecap'
+# cask 'licecap' # This wasn't working on Big Sur
 cask 'pomodone'
 cask 'signal'
 # cask 'slack'
