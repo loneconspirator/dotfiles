@@ -1,6 +1,6 @@
 " proactively save files
 " autocmd InsertLeave * :w<CR>
-inoremap <Esc> <Esc>:w<CR>
+" inoremap <Esc> <Esc>:w<CR>
 
 " not sure if I need these anymore
 set autowrite
