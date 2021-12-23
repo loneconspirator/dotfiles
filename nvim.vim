@@ -77,11 +77,11 @@ Plug 'ncm2/ncm2-tmux'
     " When the <Enter> key is pressed while the popup menu is visible, it only
     " hides the menu. Use this mapping to close the menu and also start a new
     " line.
-    inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+    " inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
     " Use <TAB> to select the popup menu:
-    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+    " inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
     " wrap existing omnifunc
     " Note that omnifunc does not run in background and may probably block the
@@ -162,7 +162,9 @@ let g:scala_scaladoc_indent = 1
 
 " Linting
 Plug 'w0rp/ale'
-let b:ale_fixers = { 'ruby': 'rubocop' }
+" let b:ale_linters = { 'ruby': ['standardrb', 'rubocop', 'reek'] }
+let b:ale_fixers = { 'ruby': ['rubocop'] }
+" let g:ale_fix_on_save = 1
 highlight ALEWarning ctermbg=DarkGrey
 nmap <leader>ra :ALEFix<CR>
 
@@ -227,7 +229,7 @@ if has("vms")
 else
   set backup		" keep a backup file (restore to previous version)
   if has('persistent_undo')
-    set undofile	" keep an undo file (undo changes after closing)
+    " set undofile	" keep an undo file (undo changes after closing)
   endif
 endif
 
