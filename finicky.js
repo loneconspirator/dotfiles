@@ -14,6 +14,10 @@ module.exports = {
       browser: "Google Chrome"
     },
     {
+      match: /^https?:\/\/[^\/]*codeship\.com\/.*$/,
+      browser: "Google Chrome"
+    },
+    {
       match: /^https?:\/\/[^\/]*rollbar\.com\/.*$/,
       browser: "Google Chrome"
     },
