@@ -2,7 +2,7 @@ module.exports = {
   defaultBrowser: "Brave Browser",
   handlers: [
     {
-      match: /^https?:\/\/[^\/]*google\.com\/.*$/,
+      match: /^https?:\/\/[^\/]*\.google\.com\/.*$/,
       browser: "Google Chrome"
     },
     {
@@ -10,15 +10,23 @@ module.exports = {
       browser: "Google Chrome"
     },
     {
-      match: /^https?:\/\/[^\/]*heroku\.com\/.*$/,
+      match: /^https?:\/\/([^\/]*\.)?heroku\.com\/.*$/,
       browser: "Google Chrome"
     },
     {
-      match: /^https?:\/\/[^\/]*codeship\.com\/.*$/,
+      match: /^https?:\/\/([^\/]*\.)?codeship\.com\/.*$/,
       browser: "Google Chrome"
     },
     {
-      match: /^https?:\/\/[^\/]*rollbar\.com\/.*$/,
+      match: /^https?:\/\/([^\/]*\.)?rollbar\.com\/.*$/,
+      browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/([^\/]*\.)?quip\.com\/.*$/,
+      browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/([^\/]*\.)?zoom\.com\/.*$/,
       browser: "Google Chrome"
     },
   ]
