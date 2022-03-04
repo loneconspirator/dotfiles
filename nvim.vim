@@ -134,6 +134,10 @@ else
   Plug 'floobits/floobits-neovim'
 endif
 
+" Dim the inacivated windows
+:hi StatusLineNC cterm=NONE ctermbg=DarkGrey ctermfg=Black
+:hi NormalNC cterm=NONE ctermbg=236
+
 " JVM / Scala
 " Plug 'roxma/nvim-yarp'
 " Plug 'roxma/vim-hug-neovim-rpc'
