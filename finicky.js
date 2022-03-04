@@ -29,5 +29,9 @@ module.exports = {
       match: /^https?:\/\/([^\/]*\.)?zoom\.com\/.*$/,
       browser: "Google Chrome"
     },
+    {
+      match: /^https?:\/\/([^\/]*\.)?monday\.com\/.*$/,
+      browser: "Google Chrome"
+    },
   ]
 }
