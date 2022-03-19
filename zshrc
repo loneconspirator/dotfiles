@@ -35,6 +35,8 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+# FPATH=$(brew --prefix)/share/zsh-syntax-highlighting:$FPATH
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
