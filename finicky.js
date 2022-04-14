@@ -2,11 +2,11 @@ module.exports = {
   defaultBrowser: "Brave Browser",
   handlers: [
     {
-      match: /^https?:\/\/[^\/]*\.google\.com\/.*$/,
+      match: /^https?:\/\/([^\/]*\.)?codeship\.com\/.*$/,
       browser: "Google Chrome"
     },
     {
-      match: /^https?:\/\/trello\.com\/.*$/,
+      match: /^https?:\/\/[^\/]*\.google\.com\/.*$/,
       browser: "Google Chrome"
     },
     {
@@ -14,11 +14,7 @@ module.exports = {
       browser: "Google Chrome"
     },
     {
-      match: /^https?:\/\/([^\/]*\.)?codeship\.com\/.*$/,
-      browser: "Google Chrome"
-    },
-    {
-      match: /^https?:\/\/([^\/]*\.)?rollbar\.com\/.*$/,
+      match: /^https?:\/\/([^\/]*\.)?monday\.com\/.*$/,
       browser: "Google Chrome"
     },
     {
@@ -26,11 +22,19 @@ module.exports = {
       browser: "Google Chrome"
     },
     {
-      match: /^https?:\/\/([^\/]*\.)?zoom\.com\/.*$/,
+      match: /^https?:\/\/([^\/]*\.)?rollbar\.com\/.*$/,
       browser: "Google Chrome"
     },
     {
-      match: /^https?:\/\/([^\/]*\.)?monday\.com\/.*$/,
+      match: /^https?:\/\/trello\.com\/.*$/,
+      browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/([^\/]*\.)?zendesk\.com\/.*$/,
+      browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/([^\/]*\.)?zoom\.com\/.*$/,
       browser: "Google Chrome"
     },
   ]
