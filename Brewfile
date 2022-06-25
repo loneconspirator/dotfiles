@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 
+top 'heroku/brew'
 tap 'goles/battery'
 tap 'uptech/homebrew-oss'
 
@@ -34,6 +35,7 @@ brew 'fzf'
 brew 'gcc'
 brew 'git'
 brew 'git-town'
+brew 'heroku'
 brew 'neovim'
 brew 'nginx'
 brew 'node'
