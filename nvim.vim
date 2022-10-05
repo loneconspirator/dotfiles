@@ -127,13 +127,6 @@ runtime macros/matchit.vim
 nnoremap <Leader>ss :<C-u>call gitblame#echo()<CR>
 nnoremap <Leader>g :<C-u>Commits<CR>
 
-" Floobits for pairing
-if has('nvim')
-  Plug 'floobits/floobits-neovim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'floobits/floobits-neovim'
-endif
-
 " Dim the inacivated windows
 :hi StatusLineNC cterm=NONE ctermbg=DarkGrey ctermfg=Black
 :hi NormalNC cterm=NONE ctermbg=236
