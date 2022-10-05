@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
 top 'heroku/brew'
@@ -25,6 +26,13 @@ cask 'slack'
 cask 'spotify'
 cask 'vlc'
 cask 'workflowy'
+
+# Fonts
+cask "font-cascadia-code"
+cask "font-fira-code"
+cask "font-iosevka"
+# cask "font-monoid"
+cask "font-monoisome"
 
 brew 'uptech/oss/alt' # For finding alt files
 brew 'arduino-cli'
