@@ -14,6 +14,7 @@
   nb = checkout -b
   ph = push
   pl = pull
+  ri = rebase --interactive master --autosquash
   sh = stash -u
   sp = stash pop
   ss = status
@@ -45,6 +46,7 @@
   ship = town ship
   sync = town sync
 [commit]
+  # This doesn't seem to work
   autosquash = true
 [core]
   editor = nvim
