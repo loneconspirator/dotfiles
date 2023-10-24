@@ -14,7 +14,8 @@
   nb = checkout -b
   ph = push
   pl = pull
-  ri = rebase --interactive master --autosquash
+  ri = !git rebase master && git rebase --interactive master --autosquash
+  rbm = rebase master
   sh = stash -u
   sp = stash pop
   ss = status

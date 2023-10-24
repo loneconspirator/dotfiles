@@ -3,7 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
-top 'heroku/brew'
+tap 'heroku/brew'
 tap 'goles/battery'
 tap 'uptech/homebrew-oss'
 
@@ -62,6 +62,7 @@ brew 'ruby'
 brew 'terminal-notifier'
 brew 'the_silver_searcher'
 brew 'tmux'
+brew 'yamllint'
 brew 'yarn'
 brew 'zsh'
 # brew 'zsh-completions' # needs to be installed manually to on-my-zsh

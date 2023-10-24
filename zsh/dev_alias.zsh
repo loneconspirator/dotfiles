@@ -6,6 +6,7 @@ alias tc='rm -rf tmp/cache'
 alias dblt='RAILS_ENV=test bundle exec rails db:schema:load'
 alias dbm='bundle exec rails db:migrate ; dblt'
 alias dbr='bundle exec rails db:rollback ; dblt'
+alias kc='killall chromedriver; killall "Google Chrome"'
 
 alias cdip="cd ~/git/InPlay"
 

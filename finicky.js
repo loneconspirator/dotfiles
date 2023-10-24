@@ -2,6 +2,10 @@ module.exports = {
   defaultBrowser: "Brave Browser",
   handlers: [
     {
+      match: /^https?:\/\/([^\/]*\.)?asana\.com\/.*$/,
+      browser: "Google Chrome"
+    },
+    {
       match: /^https?:\/\/([^\/]*\.)?codeship\.com\/.*$/,
       browser: "Google Chrome"
     },
@@ -23,6 +27,10 @@ module.exports = {
     },
     {
       match: /^https?:\/\/([^\/]*\.)?rollbar\.com\/.*$/,
+      browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/([^\/]*\.)?sharepoint\.com\/.*$/,
       browser: "Google Chrome"
     },
     {

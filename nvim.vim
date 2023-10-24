@@ -16,6 +16,7 @@ let mapleader = " "
 nmap <leader>vi :tabnew ~/.config/nvim/init.vim<CR>
 nmap <leader>so :source ~/.config/nvim/init.vim<CR>
 nmap <leader>w :w<CR>
+nmap <leader>W :wa<CR>
 
 map <ScrollWheelUp> <C-U>
 map <ScrollWheelDown> <C-D>
@@ -52,7 +53,9 @@ Plug 'tpope/vim-sensible'
 Plug 'honza/vim-snippets'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
+
+Plug 'github/copilot.vim', { 'branch': 'release' }
 
 " NCM2 / autocomplete stuff
 " enable ncm2 for all buffers
@@ -125,7 +128,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'zivyangll/git-blame.vim'
 runtime macros/matchit.vim
 nnoremap <Leader>ss :<C-u>call gitblame#echo()<CR>
-nnoremap <Leader>g :<C-u>Commits<CR>
+nnoremap <Leader>gb :<C-u>Git blame<CR>
 
 " Dim the inacivated windows
 :hi StatusLineNC cterm=NONE ctermbg=DarkGrey ctermfg=Black
@@ -167,7 +170,7 @@ nmap <leader>ra :ALEFix<CR>
 
 " Ruby / Rails
 au BufRead,BufNewFile *.thor setfiletype ruby
-" Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'haml', 'eruby'] } "<- ERRORING
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'haml', 'eruby'] } "<- ERRORING
 Plug 'tpope/vim-rake', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'coffee', 'javascript'] }
 Plug 'tpope/vim-rbenv', { 'for': 'ruby' }
@@ -178,6 +181,14 @@ Plug 'jgdavey/tslime.vim'
 
 " plantuml
 Plug 'aklt/plantuml-syntax'
+
+" yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+Plug 'Yggdroot/indentLine'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"let g:indentLine_char = '▏'
+Plug 'pedrohdz/vim-yaml-folds'
+
 call plug#end()
 
 source $DOTFILES/nvim/autosave.vim
