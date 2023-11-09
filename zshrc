@@ -1,12 +1,23 @@
 # If you come from bash you might have to change your $PATH
-export PATH=$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+if [[ $(uname -m) == 'arm64' ]]; then
+  export PATH=$HOME/bin:$DOTFILES/bin:/opt/homebrew/bin/:$PATH
+  export PATH="/opt/homebrew/sbin:$PATH"
+  export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+else
+  export PATH=$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH
+  export PATH="/usr/local/sbin:$PATH"
+  export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
