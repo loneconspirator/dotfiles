@@ -21,9 +21,13 @@ nmap <leader>W :wa<CR>
 map <ScrollWheelUp> <C-U>
 map <ScrollWheelDown> <C-D>
 
-let g:ruby_host_prog = '/Users/mike/.rbenv/shims/neovim-ruby-host'
-let g:python_host_prog = '/usr/local/bin/python2'
-let g:python3_host_prog = '/usr/local/bin/python3'
+" let g:ruby_host_prog = '/Users/mike/.rbenv/shims/neovim-ruby-host'
+" let g:python_host_prog = '/usr/local/bin/python2'
+" let g:python3_host_prog = '/usr/local/bin/python3'
+
+let g:ruby_host_prog = '/Users/mike/.gem/ruby/2.6.0/bin/neovim-ruby-host'
+" let g:python_host_prog = '/usr/local/bin/python2'
+let g:python3_host_prog = '/opt/homebrew/bin/python3'
 
 set number relativenumber " line numbers
 set autoindent		" always set autoindenting on
@@ -195,6 +199,7 @@ source $DOTFILES/nvim/autosave.vim
 source $DOTFILES/nvim/file_nav.vim
 source $DOTFILES/nvim/tmux_runner.vim
 source $DOTFILES/nvim/tabs.vim
+source $DOTFILES/nvim/ruby.vim
 
 let w:scala_scaladoc_indent = 1
 

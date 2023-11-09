@@ -24,4 +24,4 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 map <leader>po :Ag .
 map <leader>pp :Buffer<CR>
 map <leader>d :bd<CR>
-map <leader>D :bufdo bd<CR>
+map <leader>a :bufdo bd<CR>:G<CR><C-W>k:bd<CR>
