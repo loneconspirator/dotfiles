@@ -30,6 +30,10 @@ module.exports = {
       browser: "Google Chrome"
     },
     {
+      match: /^https?:\/\/([^\/]*\.)?sendgrid\.net\/.*$/,
+      browser: "Google Chrome"
+    },
+    {
       match: /^https?:\/\/([^\/]*\.)?sharepoint\.com\/.*$/,
       browser: "Google Chrome"
     },
