@@ -1,5 +1,5 @@
 module.exports = {
-  defaultBrowser: "Brave Browser",
+  defaultBrowser: "Arc",
   handlers: [
     {
       match: /^https?:\/\/([^\/]*\.)?asana\.com\/.*$/,
@@ -8,6 +8,14 @@ module.exports = {
     {
       match: /^https?:\/\/([^\/]*\.)?codeship\.com\/.*$/,
       browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/[^\/]*\.gig-o-matic\.com\/.*$/,
+      browser: "Brave Browser"
+    },
+    {
+      match: /^https?:\/\/[^\/]*\.github\.com\/.*$/,
+      browser: "Brave Browser"
     },
     {
       match: /^https?:\/\/[^\/]*\.google\.com\/.*$/,
@@ -40,6 +48,14 @@ module.exports = {
     {
       match: /^https?:\/\/trello\.com\/.*$/,
       browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/youtu\.be\/.*$/,
+      browser: "Brave Browser"
+    },
+    {
+      match: /^https?:\/\/[^\/]*\.youtube\.com\/.*$/,
+      browser: "Brave Browser"
     },
     {
       match: /^https?:\/\/([^\/]*\.)?zendesk\.com\/.*$/,

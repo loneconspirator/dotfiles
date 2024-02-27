@@ -10,27 +10,29 @@ tap 'uptech/homebrew-oss'
 # The commented out ones were installed manually (brew doesn't like that)
 cask '1password'
 cask '1password-cli'
-cask 'alacritty'
 cask 'arduino'
+cask 'arc'
 cask 'asana'
-cask 'authy'
 cask 'brave-browser'
 cask 'cleanshot' # Screen Capture app
+cask 'devtoys'
 cask 'discord'
 cask 'dropbox'
 cask 'fantastical'
 cask 'finicky' # Browser chooser app
 cask 'github'
-cask 'gimp'
 cask 'google-chrome'
+cask 'hiddenbar'
 cask 'iTerm2'
+cask 'maccy'
+cask 'obsidian'
 # cask 'pomodone'
 cask 'private-internet-access'
 cask 'signal'
 cask 'slack'
 cask 'spotify'
 cask 'vlc'
-cask 'workflowy'
+cask 'warp'
 
 # Fonts
 cask "font-cascadia-code"

@@ -115,6 +115,8 @@ Plug 'rking/ag.vim'
 " Plug 'ctrlpvim/ctrlp.vim' " alternate to fzf
 Plug 'scrooloose/nerdtree'
 
+Plug 'nvim-treesitter/nvim-treesitter-context'
+
 " General development
 Plug 'benekastah/neomake'
 Plug 'christoomey/vim-tmux-navigator'
@@ -166,8 +168,11 @@ let g:scala_scaladoc_indent = 1
 
 " Linting
 Plug 'w0rp/ale'
-" let b:ale_linters = { 'ruby': ['standardrb', 'rubocop', 'reek'] }
-let b:ale_fixers = { 'ruby': ['rubocop'] }
+let b:ale_linters = { 'ruby': ['standardrb', 'rubocop', 'reek'] }
+let b:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'ruby': ['rubocop'],
+\}
 " let g:ale_fix_on_save = 1
 highlight ALEWarning ctermbg=DarkGrey
 nmap <leader>ra :ALEFix<CR>
