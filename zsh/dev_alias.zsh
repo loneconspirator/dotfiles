@@ -1,6 +1,8 @@
 alias fsd="foreman start -f Procfile.dev"
 alias bi="bundle install"
+alias gce='gh copilot explain'
 alias gcm='git checkout master'
+alias gcs='gh copilot suggest'
 alias ss='spring stop'
 alias tc='rm -rf tmp/cache'
 alias dblt='RAILS_ENV=test bundle exec rails db:schema:load'
